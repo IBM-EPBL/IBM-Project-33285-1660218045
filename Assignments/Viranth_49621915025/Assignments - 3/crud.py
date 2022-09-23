@@ -2,27 +2,27 @@ from flask import Flask,request,json
 
 app=Flask(__name__)
 
-food_items={"1":"rice", "2":"bean", "3":"yam" ,"4":"plantain" ,"5":"potato" ,"6":"wheat" }
+name={"1":"viranth", "2":"Rahul", "3":"Raju" ,"4":"Ramu" ,"5":"venkat" ,"6":"Rajesh" }
 
 @app.route('/data',methods=['GET','POST'])
 def api():
     if request.method=='GET':
-        return food_items
+        return name
     if request.method=='POST':
         data=request.json
-        food_items.update(data)
-        return 'data got inserted'
+        name.update(data)
+        return 'data got inserted in the database'
 
 @app.route("/data/<id>",methods=['PUT'])
 def update(id):
     data=request.form['item']
-    food_items[str(id)]=data
-    return 'data updated'
+    name[str(id)]=data
+    return 'data updated in the database'
 
 @app.route("/data/<id>",methods=["DELETE"])
 def deleteoperation(id):
-    food_items.pop(str(id))
-    return 'data deleted'
+    name.pop(str(id))
+    return 'data deleted from the database'
 
 if __name__=='__main__':
     app.run(debug=True)
