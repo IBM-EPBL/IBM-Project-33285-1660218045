@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.chandhru{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+.r{
+    padding: 60px 40px 50px 40px;
+    background: yellow;
+    border-radius: 10px;
+}
+#Name{
+    width: 200px;
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: transparent;
+    color: black;
+    border-bottom: 1px solid black;
+    padding: 7px;
+    margin-bottom: 20px;
+}
+#Button{
+    border-radius: 20px;
+    padding: 10px 20px;
+    background: orange;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    margin-left: 55px;
+}
+a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    color: black;
+}
