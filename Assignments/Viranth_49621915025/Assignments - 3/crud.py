@@ -8,7 +8,7 @@ name={"1":"viranth", "2":"Rahul", "3":"Raju" ,"4":"Ramu" ,"5":"venkat" ,"6":"Raj
 def api():
     if request.method=='GET':
         return name
-    if request.method=='POST':
+    if request.method=='POST':.
         data=request.json
         name.update(data)
         return 'data got inserted in the database'
