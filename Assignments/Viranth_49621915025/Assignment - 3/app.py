@@ -18,32 +18,18 @@ cos = ibm_boto3.resource("s3",
 
 app=Flask(__name__)
 
-def delete_item(bucket_name, object_name):
-    try:
-        cos.delete_object(Bucket=bucket_name, Key=object_name)
-        print("Item: {0} deleted!\n".format(object_name))
-    except ClientError as be:
-        print("CLIENT ERROR: {0}\n".format(be))
-    except Exception as e:
-        print("Unable to delete object: {0}".format(e))
 
 def multi_part_upload(bucket_name, item_name, file_path):
     try:
         print("Starting file transfer for {0} to bucket: {1}\n".format(item_name, bucket_name))
-        # set 5 MB chunks
         part_size = 1024 * 1024 * 5
 
-        # set threadhold to 15 MB
         file_threshold = 1024 * 1024 * 15
 
-        # set the transfer threshold and chunk size
         transfer_config = ibm_boto3.s3.transfer.TransferConfig(
             multipart_threshold=file_threshold,
             multipart_chunksize=part_size
         )
-
-        # the upload_fileobj method will automatically execute a multi-part upload
-        # in 5 MB chunks for all files over 15 MB
         with open(file_path, "rb") as file_data:
             cos.Object(bucket_name, item_name).upload_fileobj(
                 Fileobj=file_data,
@@ -66,7 +52,7 @@ def upload():
        return 'file uploaded successfully'
     
    if request.method == 'GET':
-       return render_template('upload.html')
+       return render_template('index.html')
        
 
 if __name__=='__main__':
