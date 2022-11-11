@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&family=Roboto+Condensed:ital,wght@1,300;1,400&display=swap');
+body{
+    /* background-color: hwb(320deg 70% 27%); */
+    /* margin: auto; */
+    
+}
+nav{
+    background-color: hwb(0deg 96% 4%);
+}
+.form-bord{
+    background-color: #FFEBC1;
+    border-radius: 10px;
+}
+.container{
+    margin-top: 50px;
+    font-family: 'Poor Story', cursive;
+    max-height: 100%;
+    text-align: center;
+    background-color: #f8f9fa;
+    
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+}
+.container h1{
+    font-weight: 900;
+    font-size: 50px;
+}
+.container h3{
+    font-weight: 900;
+    font-size: 30px;
+}
+
+/* .text-center{
+    padding: 20px 20px 20px 20px;
+} */
