@@ -16,7 +16,7 @@ s = smtplib.SMTP('smtp.gmail.com', 587)
 # def sendgridmail(user,TEXT):
 user = 'viranthrocky@gmail.com'
 TEXT = 'HELLO WELCOME'
-sg = sendgrid.SendGridAPIClient('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')
+sg = sendgrid.SendGridAPIClient('API-KEY')
 from_email = Email("1915025@nec.edu.in")  # Change to your verified sender
 to_email = To(user)  # Change to your recipient
 subject = "Sending with SendGrid is Fun"
