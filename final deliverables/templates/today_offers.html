@@ -1,0 +1,394 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Login</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <script src="https://use.fontawesome.com/441c5a67a8.js"></script>
+      <link rel="stylesheet" href="/static/css/login.css">
+      <!-- <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');</style> -->
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="/static/js/login.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><h3>Smart Fashion reccomending application</h3></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{{url_for('dash')}}">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('session')}}">sesssion</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('today_offers')}}">Today offers</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('stock')}}">stock details</a>
+              </li>
+              <form class="d-flex justify-content-center">
+                  <input class="form-control me-2" type="search" id="myInput" onkeyup="myFunction()" placeholder="Search" aria-label="Search">
+              </form>
+  
+              <div class="d-flex justify-content-end">
+                  <div class="session_name">
+                      {{session_name}} 
+                  </div>
+              </div>
+          </div>
+      </div>
+    </nav>
+    <div class="container"><h1>Accessories cheap prices</h1></div>
+      <section style="margin : 10px;">
+        <div class="row row-md-12 row-sm-12">
+            <div class="col ">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/accessories/A1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>
+              <div class="col ">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/accessories/A2.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>
+              <div class="col ">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/accessories/A3.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>
+              <div class="col ">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/accessories/A4.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>            
+        </div>
+      </section>
+
+      <section style="margin : 10px;">
+        <div class="row row-md-12 row-sm-12">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/T_SHIRT%20MEN/TS1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>
+              <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/T_SHIRT%20MEN/TS2.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>
+              <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/T_SHIRT%20MEN/TS3.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>
+              <div class="col ">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/T_SHIRT%20MEN/TS4.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>
+        </div>
+      </section>
+
+      <section class= "container-fluid"style="margin : 10px;">
+        <div class="row row-md-12 row-sm-12">
+            <div class="col ">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/KURTIS/K5.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>
+              <div class="col ">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/KURTIS/K4.webp" class="card-img-top" alt="...">                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>
+              <div class="col ">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/KURTIS/K3.webp" class="card-img-top" alt="...">                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>
+              <div class="col ">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/KURTIS/K1.webp" class="card-img-top" alt="...">                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>
+        </div>
+      </section>
+
+      <section style="margin : 10px;">
+        <div class="row row-md-12 row-sm-12">
+            <div class="col ">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/accessories/A1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>
+            
+              <div class="col ">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/accessories/A3.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>
+
+              <div class="col ">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/accessories/A4.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>
+
+            <div class="col ">
+              <div class="card" style="width: 18rem;">
+                  <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/accessories/A5.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      Rate :₹ 1,795 <br>
+                      color :	PINK <br>
+                      Fabric :	Pure Cotton <br>
+                      Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                  </div>
+                </div> 
+            </div>
+            
+        </div>
+      </section>
+
+      <section style="margin : 10px;">
+        <div class="row row-md-12 row-sm-12">
+            
+              <div class="col ">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/WATCH/W4.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>
+
+              <div class="col ">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/WATCH/W3.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>
+
+              <div class="col ">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/WATCH/W2.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>
+
+            <div class="col ">
+              <div class="card" style="width: 18rem;">
+                <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/WATCH/W1.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                      Rate :₹ 1,795 <br>
+                      color :	yellow <br>
+                      Fabric :	Pure Cotton <br>
+                      Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                  </div>
+                </div> 
+            </div>
+            
+        </div>
+      </section>
+
+
+      <section style="margin : 10px;">
+        <div class="row row-md-12 row-sm-12">
+
+          <div class="col">
+              <div class="card" style="width: 18rem;">
+                  <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/dhoti%20shirt/DHO3.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      Rate :₹ 1,795 <br>
+                      color :	PINK <br>
+                      Fabric :	Pure Cotton <br>
+                      Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                  </div>
+                </div> 
+          </div>
+      
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                  <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/dhoti%20shirt/DHO4.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      Rate :₹ 1,795 <br>
+                      color :	PINK <br>
+                      Fabric :	Pure Cotton <br>
+                      Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                  </div>
+                </div> 
+            </div>
+            
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                  <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/dhoti%20shirt/DHO5.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      Rate :₹ 1,795 <br>
+                      color :	PINK <br>
+                      Fabric :	Pure Cotton <br>
+                      Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                  </div>
+                </div> 
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://demo-checking.s3.jp-tok.cloud-object-storage.appdomain.cloud/dress/dhoti%20shirt/DHO1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        Rate :₹ 1,795 <br>
+                        color :	PINK <br>
+                        Fabric :	Pure Cotton <br>
+                        Customer review : <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </div>
+                  </div> 
+              </div>
+            
+        </div>
+      </section>
+
+      <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "31ab4910-4434-4eb1-b27b-175e9670469d", // The ID of this integration.
+          region: "au-syd", // The region your integration is hosted in.
+          serviceInstanceID: "b0bec10e-a98c-433f-bed9-6e738ddb7e0a", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+
+<script>
+  function myFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+  </script>
+  </body>
+  </html>

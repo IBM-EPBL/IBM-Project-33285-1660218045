@@ -1,0 +1,9 @@
+login table create:
+create table signup(id numeric GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1) primary key,
+name varchar(30) not null,
+email varchar(30) not null unique,
+phone varchar(30) not null, 
+password varchar(30)not null
+);
+
+

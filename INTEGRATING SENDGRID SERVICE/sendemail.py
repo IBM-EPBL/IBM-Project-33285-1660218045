@@ -14,18 +14,17 @@ s = smtplib.SMTP('smtp.gmail.com', 587)
 #     s.sendmail("il.pradeepthi@gmail.com", email, message)
 #     s.quit()
 # def sendgridmail(user,TEXT):
-user = 'viranthrocky@gmail.com'
-TEXT = 'HELLO WELCOME'
-sg = sendgrid.SendGridAPIClient('API-KEY')
-from_email = Email("1915025@nec.edu.in")  # Change to your verified sender
-to_email = To(user)  # Change to your recipient
-subject = "Sending with SendGrid is Fun"
-content = Content("text/plain",TEXT)
-mail = Mail(from_email, to_email, subject, content)
-response = sg.send(mail)
-print(response.status_code)
-print(response.body)
-print(response.headers)
+def sendmail(user,TEXT):
+    sg = sendgrid.SendGridAPIClient('API-KEY')
+    from_email = Email("1915025@nec.edu.in")  # Change to your verified sender
+    to_email = To(user)  # Change to your recipient
+    subject = "login"
+    content = Content("text/plain",TEXT)
+    mail = Mail(from_email, to_email, subject, content)
+    response = sg.send(mail)
+    print(response.status_code)
+    print(response.body)
+    print(response.headers)
 
 # Get a JSON-ready representation of the Mail object
 # Send an HTTP POST request to /mail/send

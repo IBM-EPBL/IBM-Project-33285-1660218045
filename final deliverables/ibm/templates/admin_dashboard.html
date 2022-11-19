@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/441c5a67a8.js"></script>
+    <link rel="stylesheet" href="/static/css/login.css">
+    <!-- <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');</style> -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><h3>Smart Fashion reccomending application</h3></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{url_for('dash')}}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('session')}}">sesssion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('today_offers')}}">Today offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('stock')}}">stock details</a>
+                </li>
+                <form class="d-flex justify-content-center">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+    
+                <div class="d-flex justify-content-end">
+                    <div class="session_name">
+                        {{session_name}} 
+                    </div>
+                </div>
+            </div>
+        </div>
+      </nav>
+      <div class="container shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="row">
+            <div class="col-md-8 col-sm-8 col-xs-8 d-flex justify-content-center">
+                <img src="/static/images/img.png" class="img-fluid img-responsive" alt="">
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4 text-md-left" >
+                <div class="center-text" style="margin-top:50px ;">
+                    <h3>
+                        Rainy season collections<br/>
+                    </h3>
+                    <h1>
+                        Get up to 30% offer<br/>
+                        New Arrivals
+                    </h1>
+                    <a href="127.0.0.1:5000/login" class="btn btn-lg btn-danger">Shop <i class="fa fa-arrow-right" aria-hidden="true"></i> </a>
+                </div>
+            </div>
+            
+        </div>
+      </div>
+      <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "31ab4910-4434-4eb1-b27b-175e9670469d", // The ID of this integration.
+          region: "au-syd", // The region your integration is hosted in.
+          serviceInstanceID: "b0bec10e-a98c-433f-bed9-6e738ddb7e0a", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+</body>
+</html>

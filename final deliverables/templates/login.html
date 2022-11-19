@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/441c5a67a8.js"></script>
+    <link rel="stylesheet" href="/static/css/login.css">
+    <!-- <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');</style> -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/static/js/login.js"></script>
+</head>
+<body>
+    <section class="container justify-content-center">
+        <h1 class="fs-1 text-wrap"><marquee>Smart Fashion Recommender Application</marquee></h1>
+    </section>
+
+<section class="container">
+    <div class="row justify-content-center"  style="padding:20px 20px 20px 20px ;">
+        <div class="col-sm-8 col-md-6">
+            <p class="fs-1 fs-2 fs-4 text-wrap">Hello, Welcome back bro!!!</p>
+            <img src="/static/images/img1.png" class="img-fluid img-responsive" style="width: 60%;" alt="">
+          </div>
+        <section class="mb-3 col col-sm-8 col-md-6 form-bord shadow p-3 d-flex justify-content-center">
+            <form action="http://127.0.0.1:5000/login" method="post" id="contact-form" name="contact-form" class="mb-3 col-md-12">
+                <div id="msg">{{msg}}</div>
+                <div class="mb-4 col-md-12">
+                        <label for="name" class="">Enter your mail</label>
+                        <input type="email" id="email" name="email" class="form-control">
+                </div>
+                <div class="mb-4 col-md-12">
+                        <label for="email" class="">Your password</label>
+                        <input type="password" id="pass" name="pass" class="form-control">
+                </div>
+                <div class="mb-3 text-center text-md-left">
+                    <button type="submit" class="btn btn-success btn-responsive " onclick=" return contact();" >Login</button>
+                    <a class="btn btn-primary" href="{{url_for('register')}}">signup</a>
+                </div>
+            </form>
+        </section>
+    </div>   
+</section>
+</body>
+</html>

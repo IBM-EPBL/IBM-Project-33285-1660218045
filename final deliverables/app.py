@@ -16,7 +16,9 @@ conn=ibm_db.connect("DATABASE=bludb;HOSTNAME=b0aebb68-94fa-46ec-a1fc-1c999edb618
 def homer():
     return render_template('index.html')
 
-
+@app.route('/user')
+def user():
+    return render_template('user.html')
 @app.route('/login',methods =['GET', 'POST'])
 def login():
     global userid
@@ -24,22 +26,6 @@ def login():
     session_name = ''
     username = ''
     if request.method == 'POST' :
-        username = request.form['email']
-        password = request.form['pass']
-        if username =="admin@gmail.com" and password=="Admin":
-            name = 'Admin'
-            email = 'Admin@gmail.com'
-            number = '8870191562'
-            now = datetime.now()
-            insert_sql = "INSERT INTO  session VALUES (?, ?, ?, ?)"
-            prep_stmt = ibm_db.prepare(conn, insert_sql)
-            ibm_db.bind_param(prep_stmt, 1, name )
-            ibm_db.bind_param(prep_stmt, 2, email )
-            ibm_db.bind_param(prep_stmt, 3, number)
-            ibm_db.bind_param(prep_stmt, 4, now)
-            ibm_db.execute(prep_stmt)
-            return render_template('admin_dashboard.html', msg = msg,session_name=session_name)
-    elif request.method == 'POST' :
         username = request.form['email']
         password = request.form['pass']
         sql = "SELECT * FROM signup WHERE EMAIL =? AND PASSWORD=?"
@@ -66,10 +52,9 @@ def login():
             ibm_db.bind_param(prep_stmt, 3, number)
             ibm_db.bind_param(prep_stmt, 4, now)
             ibm_db.execute(prep_stmt)
-            return render_template('user_dashboard.html', msg = msg)
+            return render_template('user.html', msg = msg)
         else:
             msg = 'Incorrect username or password !'
-    sendmail(user,TEXT)
     return render_template('login.html', msg = msg)
 
         
